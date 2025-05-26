@@ -38,24 +38,36 @@ const somma = (userNum + botNum)
 console.log(`La somma dei due numeri è ${somma}`)
 
 function pariOdispari() {
+
   let pari = true
+
   if (somma % 2 !== 0) {
     pari = false
-    console.log('Il numero è dispari')
+    console.log('Il risultato è dispari')
+    if ((scelta === 'dispari') && (pari = false)) {
+      console.log('Hai scelto dispari e hai vinto!')
+    } else {
+      console.log('Hai perso')
+    }
   } else {
-    console.log('Il numero è pari')
+    console.log('Il risultato è pari')
+    if ((scelta === 'pari') && (pari = true)) {
+      console.log('Hai scelto pari e hai vinto!')
+    } else {
+      console.log('Hai perso')
+    }
   }
+
+  console.log(pari)
+
   return pari
 
 }
 
-let ver = pariOdispari(somma)
-console.log(ver)
 
-if ((scelta === 'pari') && (ver = true)) {
-  console.log('Hai scelto pari e hai vinto!')
-} else if ((scelta === 'dispari') && (ver = false)) {
-  console.log('Hai scelto dispari e hai vinto!')
-} else {
-  console.log('Hai perso')
-}
+
+
+
+let ver = pariOdispari(somma)
+// console.log(ver)
+
