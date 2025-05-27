@@ -44,14 +44,14 @@ function pariOdispari() {
   if (somma % 2 !== 0) {
     pari = false
     console.log('Il risultato è dispari')
-    if ((scelta === 'dispari') && (pari = false)) {
+    if (scelta === 'dispari') {
       console.log('Hai scelto dispari e hai vinto!')
     } else {
       console.log('Hai perso')
     }
   } else {
     console.log('Il risultato è pari')
-    if ((scelta === 'pari') && (pari = true)) {
+    if (scelta === 'pari') {
       console.log('Hai scelto pari e hai vinto!')
     } else {
       console.log('Hai perso')
@@ -64,10 +64,5 @@ function pariOdispari() {
 
 }
 
-
-
-
-
 let ver = pariOdispari(somma)
 // console.log(ver)
-
